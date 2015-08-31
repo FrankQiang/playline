@@ -1,0 +1,142 @@
+body{
+    padding-top: 50px;
+}
+
+html, body{
+    height:100%;
+}
+
+img{
+    width: 100%;
+}
+
+a {
+    color:#FF8A00;
+}
+
+a:hover {
+    color:#FF8A00;
+}
+
+.icon-sign-sina {
+    width: 21px;
+    height: 19px;
+    margin: 0px 4px -1px 0px;
+    vertical-align: -4px;
+    background-position: -17px -1px;
+}
+
+.icon-sign-qq {
+    width: 16px;
+    height: 18px;
+    vertical-align: -2px;
+    background-position: -90px 0px;
+}
+
+.icon-sign {
+    display: inline-block;
+    background-image: url("/static/playline/img/signup.png");
+    background-repeat: no-repeat;
+}
+
+.view_times{background: url("/static/playline/img/eye.jpg") no-repeat;padding:0px 5px 0px 25px}
+.reply_times{background: url("/static/playline/img/reply.jpg") no-repeat;padding:2px 2px 2px 28px}
+.like{background: url("/static/playline/img/like.jpg") no-repeat;padding:0 5px 2px 22px}
+
+
+.navbar-inverse .navbar-form{
+    position: relative;
+}
+
+.navbar-inverse button[type="submit"] {
+    position: absolute;
+    top:25%;
+    right: 20px;
+    height: 25px;
+    background: #fff;
+    border: none;
+}
+
+@media(min-width: 758px)  {
+    .navbar-inverse button[type="submit"] {
+    top:15%;
+      }
+}
+
+.navbar-inverse .glyphicon {
+    color: #999;
+}
+
+.main {
+    padding-bottom:15px;
+}
+
+.type-class {
+    border-bottom: 1px solid #d7d7d7;
+    margin: 15px 20px 30px 20px;
+}
+
+.type-class h2 {
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    bottom: -10px;
+    width: 65px;
+}
+
+.class-content h3 {
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+.class-info span,
+.class-info time {
+    margin-right: 10px;
+    color: #888;
+}
+
+.class-info img {
+    width:32px;
+}
+
+.class-info p {
+    margin-top: 10px;
+    color: #888;
+}
+
+.footer {
+    background-color: #2D2D2D;
+}
+
+.footer h2 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.footer img{
+    width: 145px;
+}
+
+.footer a {
+    color: #666;
+}
+
+.footer .word-info h2{
+    margin-bottom: 30px;
+}
+
+
+.footer-about {
+    padding: 25px 0px 30px 0px;
+    background-color: #171819;
+}
+
+.footer-about span {
+    margin-right: 25px;
+}
+
+

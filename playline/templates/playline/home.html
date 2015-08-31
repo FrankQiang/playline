@@ -1,0 +1,148 @@
+{% extends 'playline/base.html' %}
+
+{% load staticfiles %}
+{% block body_block %}
+<div class="main">
+    <div class="carousel slide" data-ride="carousel" id="slideshow" data-interval='5000'>
+        <ol class="carousel-indicators">
+            <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+            <li data-target="#slideshow" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="#"><img src="{% static "playline/img/01.jpg" %}" alt="1"></a>
+                <div class="carousel-caption">
+                    <h2>1</h2>
+                </div>
+            </div>   
+            <div class="item">
+                <a href="#"><img src="{% static "playline/img/02.jpg" %}" alt="2"></a>
+                <div class="carousel-caption">
+                    <h2>2</h2>
+                </div>
+            </div> 
+            <a href="#slideshow" data-slide="prev" class="left carousel-control">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+            </a> 
+            <a href="#slideshow" data-slide="next" class="right carousel-control">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>     
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="type-class">
+                <h2>课程</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="{% static "playline/img/example.jpg" %}" alt="example">
+                    <div class="caption class-content">
+                        <h3>游记标题</h3>
+                        <div class="class-info">
+                            <span>
+                                <img class="img-circle" src="{% static "playline/img/photo.jpeg" %}" alt="" title="one">
+                            </span>
+                            <time>2015-3-15</time>
+                            <span class="view_times">49</span>
+                            <span class="reply_times">0</span>
+                            <span class="like">6</span>
+                            <p>停车棚以喜欢骑自行车的荷兰女王的名字命名。它既是一个火车站入口又是一个自行车停车棚，其设计目的是鼓励、欢迎游客到此并增加使用它的人数。允许100个字符</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="{% static "playline/img/example.jpg" %}" alt="example">
+                    <div class="caption class-content">
+                        <h3>游记标题</h3>
+                        <div class="class-info">
+                            <span>
+                                <img class="img-circle" src="{% static "playline/img/photo.jpeg" %}" alt="" title="one">
+                            </span>
+                            <time>2015-3-15</time>
+                            <span class="view_times">49</span>
+                            <span class="reply_times">0</span>
+                            <span class="like">6</span>
+                            <p>停车棚以喜欢骑自行车的荷兰女王的名字命名。它既是一个火车站入口又是一个自行车停车棚，其设计目的是鼓励、欢迎游客到此并增加使用它的人数。允许100个字符</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="{% static "playline/img/example.jpg" %}" alt="example">
+                    <div class="caption class-content">
+                        <h3>游记标题</h3>
+                        <div class="class-info">
+                            <span>
+                                <img class="img-circle" src="{% static "playline/img/photo.jpeg" %}" alt="" title="one">
+                            </span>
+                            <time>2015-3-15</time>
+                            <span class="view_times">49</span>
+                            <span class="reply_times">0</span>
+                            <span class="like">6</span>
+                            <p>停车棚以喜欢骑自行车的荷兰女王的名字命名。它既是一个火车站入口又是一个自行车停车棚，其设计目的是鼓励、欢迎游客到此并增加使用它的人数。允许100个字符</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="{% static "playline/img/example.jpg" %}" alt="example">
+                    <div class="caption class-content">
+                        <h3>游记标题</h3>
+                        <div class="class-info">
+                            <span>
+                                <img class="img-circle" src="{% static "playline/img/photo.jpeg" %}" alt="" title="one">
+                            </span>
+                            <time>2015-3-15</time>
+                            <span class="view_times">49</span>
+                            <span class="reply_times">0</span>
+                            <span class="like">6</span>
+                            <p>停车棚以喜欢骑自行车的荷兰女王的名字命名。它既是一个火车站入口又是一个自行车停车棚，其设计目的是鼓励、欢迎游客到此并增加使用它的人数。允许100个字符</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="{% static "playline/img/example.jpg" %}" alt="example">
+                    <div class="caption class-content">
+                        <h3>游记标题</h3>
+                        <div class="class-info">
+                            <span>
+                                <img class="img-circle" src="{% static "playline/img/photo.jpeg" %}" alt="" title="one">
+                            </span>
+                            <time>2015-3-15</time>
+                            <span class="view_times">49</span>
+                            <span class="reply_times">0</span>
+                            <span class="like">6</span>
+                            <p>停车棚以喜欢骑自行车的荷兰女王的名字命名。它既是一个火车站入口又是一个自行车停车棚，其设计目的是鼓励、欢迎游客到此并增加使用它的人数。允许100个字符</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="{% static "playline/img/example.jpg" %}" alt="example">
+                    <div class="caption class-content">
+                        <h3>游记标题</h3>
+                        <div class="class-info">
+                            <span>
+                                <img class="img-circle" src="{% static "playline/img/photo.jpeg" %}" alt="" title="one">
+                            </span>
+                            <time>2015-3-15</time>
+                            <span class="view_times">49</span>
+                            <span class="reply_times">0</span>
+                            <span class="like">6</span>
+                            <p>停车棚以喜欢骑自行车的荷兰女王的名字命名。它既是一个火车站入口又是一个自行车停车棚，其设计目的是鼓励、欢迎游客到此并增加使用它的人数。允许100个字符</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

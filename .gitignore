@@ -1,0 +1,11 @@
+/playline/__init__.py
+/playline/settings.py
+/playline/wsgi.py
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build

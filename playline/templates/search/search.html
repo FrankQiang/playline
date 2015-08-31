@@ -1,0 +1,81 @@
+{% extends 'playline/base.html' %}
+
+{% block title %}
+{{ query }}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/static/search/css/index.css">
+{% endblock %}
+
+
+{% block body_block %}
+<div class="container main">
+    <div class="row">    
+        <div class="col-md-4"></div>     
+            <div class="col-md-8">
+                <form action="." method="get" class="navbar-form" >
+                         <input style="width:505px" class="form-control" placeholder="检索内容" name="q"  autocomplete="off" type="text" value="{{ query }}">
+                         <button type="submit" class="btn btn-info">搜索</button>
+                   </form>
+            </div>
+    </div>  
+    <div class="row" style="padding-top:25px">
+        <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <ul class="nav nav-tabs" style="margin-bottom:25px">
+                    <li role="presentation"><a href="#">教程</a></li>
+                    <li role="presentation"  class="active"><a href="?q={{ query }}&models=note.note">随笔</a></li>
+                </ul>
+            </div>
+        </div>   
+    <div class="row">
+        <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-8 side-right">
+                        {% if query %}
+                            {% for result in page.object_list %}
+                            <div class="row">
+                                <div class="col-md-12 info">
+                                    <div class="list-group">
+                                        <a href="{{ result.object.get_absolute_url }}" class="list-group-item">
+                                        <h4 class="list-group-item-heading">{{ result.object.title }}</h4>
+                                        <p class="list-group-item-text">
+                                            {{ result.object.body }}
+                                            <div class="more-info pull-right">
+                                                <time>{{ result.object.user.get_full_name }}</time>
+                                            </div>
+                                        </p>    
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                            <div class="row">
+                                <div class="col-md-12 info">
+                                    <div class="list-group">
+                                        not result found
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {% if page.has_previous or page.has_next %}
+                            <div>
+                                {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+                                |
+                                {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        {# Show some example queries to run, maybe query syntax, something else? #}
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+                  
+{% endblock %}
