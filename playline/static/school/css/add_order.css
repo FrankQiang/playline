@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+.main{
+    margin:35px 0px 55px 0px;
+}
+
+.order{
+    background-color: #FAFAFA;
+    padding: 35px 60px 60px 60px;
+}
+
+.order_title{
+    float: left;
+    right:77px;
+    top:1px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: normal;
+    height: 43px;
+    background: #FCC824 none repeat scroll 0% 0%;
+    margin: -8px 0px 10px 40px;
+    padding: 0px 20px;
+    line-height: 43px;
+    position: absolute;
+    z-index: 2;
+}
+
+.order_title em{
+    background: transparent url("/static/school/img/title_arrow.png") no-repeat scroll 0% 0%;
+    width: 6px;
+    height: 8px;
+    position: absolute;
+    left: -6px;
+    top: 0px;
+}
+
+.fieldWrapper h3 span{
+    font-size: 14px;
+    color: #999;
+}
+
+.restar{
+    color: #FE6161;
+    padding: 0px 5px;
+    margin-top: 15px;
+    font-style: normal;
+}
+
+.order_submit{
+    font-size: 22px;
+color: #FFF;
+border: 0px none;
+background: #FCC824 none repeat scroll 0% 0%;
+padding: 6px 30px;
+margin-top: 45px;
+transition: all 0.2s ease 0s;
+}
+
+.order_submit:hover{
+    background: #FF8A00 none repeat scroll 0% 0%;
+}

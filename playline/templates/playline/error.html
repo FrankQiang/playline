@@ -1,0 +1,21 @@
+{% extends 'playline/base.html' %}
+
+{% load staticfiles %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static "playline/css/error.css" %}">
+{% endblock %}
+
+{% block body_block %}
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="error">
+                    <img src="{% static "playline/img/404.png" %}" alt="1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

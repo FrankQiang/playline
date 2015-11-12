@@ -1,0 +1,5 @@
+{{ object.id }}
+{{ object.title }}
+{{ object.info }}
+{{ object.image }}
+{{ object.pub_date }}

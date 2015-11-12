@@ -18,6 +18,10 @@ a:hover {
     color:#FF8A00;
 }
 
+li {
+    list-style: outside none none;
+}
+
 .icon-sign-sina {
     width: 21px;
     height: 19px;
@@ -27,8 +31,8 @@ a:hover {
 }
 
 .icon-sign-qq {
-    width: 16px;
-    height: 18px;
+    width: 18px;
+    height: 17px;
     vertical-align: -2px;
     background-position: -90px 0px;
 }
@@ -40,7 +44,6 @@ a:hover {
 }
 
 .view_times{background: url("/static/playline/img/eye.jpg") no-repeat;padding:0px 5px 0px 25px}
-.reply_times{background: url("/static/playline/img/reply.jpg") no-repeat;padding:2px 2px 2px 28px}
 .like{background: url("/static/playline/img/like.jpg") no-repeat;padding:0 5px 2px 22px}
 
 
@@ -69,6 +72,7 @@ a:hover {
 
 .main {
     padding-bottom:15px;
+    min-height: 100%;
 }
 
 .type-class {
@@ -84,7 +88,7 @@ a:hover {
     padding: 0 10px;
     position: relative;
     bottom: -10px;
-    width: 65px;
+    width: 100px;
 }
 
 .class-content h3 {
@@ -117,9 +121,6 @@ a:hover {
     font-size: 20px;
 }
 
-.footer img{
-    width: 145px;
-}
 
 .footer a {
     color: #666;

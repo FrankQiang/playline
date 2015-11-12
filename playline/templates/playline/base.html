@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta property="wb:webmaster" content="fd56963211387c7f" />
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static "playline/css/bootstrap.css" %}">
     <link rel="stylesheet" href="{% static "playline/css/style.css" %}">
@@ -10,6 +11,8 @@
     <script src="{% static "playline/js/jquery.min.js" %}"></script>
     <script src="{% static "playline/js/bootstrap.js" %}"></script>
     <script src="{% static "playline/js/auth.js" %}"></script>
+    {% block javascripts %}
+    {% endblock %}
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -26,10 +29,10 @@
             </div>
             <div class="collapse navbar-collapse" id="responsive-navbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#"><strong>课程音乐</strong></a></li>
+                    <li><a href="{% url 'school:index' %}"><strong>校园生活</strong></a></li>
                 </ul>
                 {% block tab %}
-                    
+                    <a href="{%  url  'school:new'  %}" class="hidden-xs btn btn-primary btn-sm navbar-btn navbar-right">创建订单</a>
                 {% endblock %}
                 <div class="profile navbar-right">
                     <ul class="nav navbar-nav">
@@ -37,16 +40,14 @@
                             <li class="dropdown">
                                 <a class="dropdown-toggle"data-toggle="dropdown" href="javascript:void(0)">{{ user.get_full_name|default:user.username }}<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="my_info"  >我的主页</a></li> 
-                                    <li><a href="#" class="my_info">帐号设置</a></li>   
+                                    <li><a href="{% url 'user' user.id %}" class="my_info"  >我的订单</a></li> 
                                     <li><a id="logout" href="{% url 'auth:logout' %}?next={{ request.path }}" class="logout" target="_self">退出</a></li>
                                 </ul>
                             </li>
                         {% else %}
-                            <li><a class="js-bindweibo" href="javascript:;"><i class="icon-sign icon-sign-sina"></i>登录</a></li>
-                            <li><a class="js-bindqq" href="javascript:;"><i class="icon-sign icon-sign-qq"></i>登录</a></li>
+                            <li><a class="js-bindweibo" href="/login/weibo/?next/"><i class="icon-sign icon-sign-sina"></i>登录</a></li>
+                            <!-- <li><a class="js-bindqq" href="/login/qq/?next/"><i class="icon-sign icon-sign-qq"></i>登录</a></li> -->
                         {% endif %}   
-
                     </ul>
                 </div>
                     <form action="/search" class="navbar-form navbar-right">
@@ -59,7 +60,6 @@
         </div>
     </div>
     {% block body_block %}
-
     {% endblock %}
     <div class="footer">
         <div class="footer-about">
@@ -67,22 +67,18 @@
                      <div class="row">
                             <div class="col-md-6">
                                    <div class="row">
-                                          <div class="col-md-3"><span><a href="#">关于记录</a></span></div>
+                                          <div class="col-md-3"><span><a href="{% url 'about' %}">关于教易</a></span></div>
                                    </div>       
                             </div>
                             <div class="col-md-6">
                                    <div class="row">
                                           <div class="col-md-4"></div>
-                                          <div class="col-md-8"><span>Copyright © 记录 2015 All Rights Reserved </span></div>
+                                          <div class="col-md-8"><span>Copyright © 教易 2015 All Rights Reserved </span></div>
                                     </div> 
                             </div>
                      </div>
               </div>
         </div>
 </div>
-<script>$(function() {if(($('.header').height()+$('.main').height()+$('.footer').height())<$('body').height())$('.main').css('height','100%');});
-            (0,window.$)(".js-bindweibo").click(function(){auth('sina')});
-            (0,window.$)(".js-bindqq").click(function(){auth('qq')});
-    </script>
 </body>
 </html>

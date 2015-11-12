@@ -1,0 +1,28 @@
+{% extends 'playline/base.html' %}
+
+{% load staticfiles %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static "playline/css/login.css" %}">
+{% endblock %}
+
+{% block body_block %}
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div style="top: 201px; left: 451.5px; display: block;" class="modal login-modals">
+                <div class="modal-header">登录教易</div>
+                <div class="modal-body">
+                    <ul>
+                        <li style="font-size:16px">
+                            <i class="login-icon-weibo"></i>微博账号登录
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

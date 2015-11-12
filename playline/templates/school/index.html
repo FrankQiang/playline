@@ -1,0 +1,36 @@
+{% extends 'playline/base.html' %}
+{% load staticfiles %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static "school/css/add_order.css" %}">
+<link rel="stylesheet" href="{% static "school/css/bootstrap-multiselect.css" %}">
+{% endblock %}
+{% block javascripts %}
+<script src="{% static "school/js/bootstrap-multiselect.js" %}"></script>
+{% endblock %}
+{% block body_block %}
+<div class="main">
+    <div class="container">
+        <div class="row">
+            {% for life in lifes %}
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="{% url 'school:show' life.id %}"><img src="{{ life.image }}" alt="example"></a>
+                    <div class="caption class-content">
+                        <h3>{{ life.title }}</h3>
+                        <div class="class-info">
+                            <span>
+                                <img class="img-circle" src="{% static "playline/img/photo.jpeg" %}" alt="" title="one">
+                            </span>
+                            <time>{{ life.pub_date|date:"Y-m-d" }}</time>
+                            <span class="view_times">{{ life.watch }}</span>
+                            <span class="like">{{ life.like }}</span>
+                            <p>{{ life.info }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

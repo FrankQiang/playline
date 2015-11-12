@@ -3,34 +3,32 @@ body {
 }
 
 .side-right .info .list-group-item{
-	border: 0px none;
-	border-bottom: 1px dashed #D9D9D9;
-	padding-bottom: 15px;
+    border: 0px none;
+    border-bottom: 1px dashed #D9D9D9;
+    padding-bottom: 25px;
 }
 .side-right .info .list-group-item-text{
-	line-height: 22px;
+    line-height: 22px;
 }
 
 
 .side-right .more-info {
-	font-size: 14px;
-	line-height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+
 }
 
-.side-right .more-info .eye{
-	background: url(../images/eye.jpg) no-repeat;padding:0px 5px 0px 25px
-}
 
 .side-right .info a.list-group-item:hover{
-	background-color: #FFF;
+    background-color: #FFF;
 }
 
 .side-right .list-group-item-heading{
-	display: inherit;
-	color: #3F3F3F;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 36px;
+    display: inherit;
+    color: #3F3F3F;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
 }
 
 .side-left{
@@ -38,7 +36,7 @@ body {
     overflow: hidden;
   }
 
-   .side-left ul li{
+.side-left ul li{
     list-style-type: none;
     margin: 6px 0px;
   }

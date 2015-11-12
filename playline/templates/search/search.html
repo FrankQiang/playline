@@ -24,8 +24,7 @@
         <div class="col-md-1"></div>
             <div class="col-md-10">
                 <ul class="nav nav-tabs" style="margin-bottom:25px">
-                    <li role="presentation"><a href="#">教程</a></li>
-                    <li role="presentation"  class="active"><a href="?q={{ query }}&models=note.note">随笔</a></li>
+                    <li role="presentation"  class="active"><a href="?q={{ query }}&models=school.life">订单</a></li>
                 </ul>
             </div>
         </div>   
@@ -39,14 +38,22 @@
                             <div class="row">
                                 <div class="col-md-12 info">
                                     <div class="list-group">
-                                        <a href="{{ result.object.get_absolute_url }}" class="list-group-item">
+                                        <a href="{% url 'school:show' result.object.id %}" class="list-group-item">
                                         <h4 class="list-group-item-heading">{{ result.object.title }}</h4>
-                                        <p class="list-group-item-text">
-                                            {{ result.object.body }}
-                                            <div class="more-info pull-right">
-                                                <time>{{ result.object.user.get_full_name }}</time>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="{{ result.object.image }}" alt="">
                                             </div>
-                                        </p>    
+                                            <div class="col-md-6">
+                                                <p class="list-group-item-text">
+                                                    {{ result.object.info }}
+                                                </p>    
+                                            </div>
+                                           
+                                        </div>
+                                         <div class="more-info pull-right">
+                                            <time>{{ result.object.pub_date|date:"Y-m-d" }}</time>
+                                         </div>
                                     </a>
                                 </div>
                             </div>

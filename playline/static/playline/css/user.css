@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+.main{
+    margin-top: 50px;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 40px;
+    color: #333;
+    border-width: 0px 0px 1px;
+    border-style: none none solid;
+    border-color: -moz-use-text-color -moz-use-text-color #E5E5E5;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
